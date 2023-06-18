@@ -15,7 +15,7 @@ if(in_array('submit', $keys))
   unset($_SESSION['info']['submit']);
 }
 
-header("location: pharmacyRegister.php");
+header("location:  pharmaceuticalCRegister.php");
 }
 ?>
 
@@ -23,7 +23,7 @@ header("location: pharmacyRegister.php");
 <html>
 <body>
 
-<h2>Pharmacy Sign Up</h2>
+<h2> Pharmaceutical Company Sign Up</h2>
 
 <form method="POST" action="">
 
@@ -40,7 +40,7 @@ header("location: pharmacyRegister.php");
   <input type="text" id="cpword" name="confirmPassword" required><br>
 
   <input type="submit" name="submit" id="submit" value="Submit">
-  <a href="pharmacySignUp1.php">Previous</a>
+  <a href=" pharmaceuticalCSignUp1.php">Previous</a>
 </form>
 
 </body>

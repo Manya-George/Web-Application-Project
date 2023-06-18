@@ -15,13 +15,13 @@ $uname=validate($_POST["uname"]);
 $pword=validate($_POST["pword"]);
 
 if(empty($uname)){
-    header("Location: pharmacyLogin.php?error=Username is required");
+    header("Location: pharmaceuticalCLogin.php?error=Username is required");
     exit();
 }else if(empty($pword)){
-    header("Location: pharmacyLogin.php?error=Password is required");
+    header("Location:  pharmaceuticalCLogin.php?error=Password is required");
     exit();
 }else {
-    $sql="Select* from Pharmacy where username='$uname' AND passwords='$pword'";
+    $sql="Select* from PharmaceuticalCompany where username='$uname' AND passwords='$pword'";
 
     $result=mysqli_query($conn,$sql);
 
@@ -31,21 +31,21 @@ if(empty($uname)){
        {
         $_SESSION['username']=$row['username'];
         $_SESSION['password']=$row['password'];
-        $_SESSION['orgName']=$row['orgName'];
-        header("Location: pharmacyHomePage.php");
+        $_SESSION['companyName']=$row['companyName'];
+        header("Location:  pharmaceuticalCHomePage.php");
         
        }else{
-        header("Location: pharmacyLogin.php?error=Incorrect username or password");
+        header("Location:  pharmaceuticalCLogin.php?error=Incorrect username or password");
     exit();
     }
     } else{
-        header("Location: pharmacyLogin.php?error=Incorrect username or password");
+        header("Location:  pharmaceuticalCLogin.php?error=Incorrect username or password");
     exit();
     }
 }
 
 }else{
-    header("Location: pharmacyLogin.php");
+    header("Location: pharmaceuticalCLogin.php");
     exit();
 
 }
