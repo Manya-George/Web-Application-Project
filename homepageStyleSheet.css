@@ -1,0 +1,25 @@
+.navbar{
+    text-align: right;
+    background-color: cadetblue;
+    block-size: 70px;
+}
+h2{
+    text-align: center;
+    block-size: 60px;
+}
+button{
+    color:white;
+    background-color:cadetblue;
+}
+a:link{
+    color:blue;   
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
+p{
+    block-size: 2px;
+}
