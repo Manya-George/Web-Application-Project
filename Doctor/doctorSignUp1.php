@@ -21,12 +21,13 @@ header("location: doctorSignUp2.php");
 
 <!DOCTYPE html>
 <html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="..\css\style.css">
+  </head>
 <body>
-
-<h2>Doctor Sign Up</h2>
-
+<div class="p1">
 <form method="POST" action="">
-
+<h1>Doctor Sign Up</h1>
   <label for="SSN">Social Security Number:</label><br>
   <input type="number" id="SSN" name="SSN" required ><br>
 
@@ -39,18 +40,18 @@ header("location: doctorSignUp2.php");
   <label for="Speciality">Speciality:</label><br>
   <input type="text" id="Speciality" name="speciality" required ><br>
 
-  <label for="yearsOfExperience">yearsOfExperience:</label><br>
-  <input type="number" id="YOE" name="yearsOfExperience" required ><br>
+  <label for="yearsOfExperience">First Date as Doctor:</label><br>
+  <input type="date" id="YOE" name="dateDoctor" required ><br>
 
   <label for="phoneNumber">Phone Number:</label><br>
   <input type="text" id="pNo" name="phoneNumber" required  ><br><br>
 
 
 
-  <input type="submit" name="next" id="next" value="next">
+  <input type="submit" name="next" id="next" value="Next">
 
 </form>
-
+</div>
 
 </body>
 
