@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
   <link rel="stylesheet" type="text/css" href="..\css\style.css">
   </head>
 <body>
 <div class="p2">
+
 <form method="POST" action="">
-<h1>Doctor Sign Up</h1>
+<h1>Patient Sign Up</h1>
   <label for="email">E-mail:</label><br>
   <input type="text" id="email" name="email" required><br>
 
@@ -19,8 +20,9 @@
   <label for="confirmpassword">Confirm Password:</label><br>
   <input type="password" id="cpword" name="confirmPassword" required><br>
 
-  <input type="submit" name="submit" id="submit" value="Submit">
-  <a href="doctorSignUp1.php">Previous</a>
+  <input type="submit" name="submit" id="submit" value="Sign Up">
+  
+  <a href="patientSignUp1.php">Previous</a>
 </form>
 </div>
 </body>
@@ -43,30 +45,25 @@ if(isset($_SESSION['info']))
     extract($_SESSION['info']);
     
     if($password===$cpassword){ 
-      $from = new DateTime($dateDoctor);
-      $to   = new DateTime('today');
-      $experience=$from->diff($to)->y;
-      
-if($experience>=7){$rank="Senior";}
-else{$rank="Junior";}
-      $sql = "INSERT INTO Doctor (SSN,firstName,lastName,speciality,firstDateAsDoctor,ranks,phoneNumber,email,username,passwords)
-      Values ('$SSN','$firstname','$lastname','$speciality','$dateDoctor','$rank','$phoneNumber','$email','$username','$password')";
+
+    $sql = "Insert into patients (SSN,firstName,lastName,dateofBirth,Gender,addresses,phoneNumber,email,username,passwords)
+    Values ('$SSN','$fname','$lname','$dob','$gender','$Address','$pNo','$email','$username','$password')";
+
+    //$_SESSION['username']=$username;
+    //$_SESSION['password']=$password;
 
 $rs=mysqli_query($conn,$sql);
 if($rs){
     session_destroy();
-        header("location: doctorLogin.php");
+        header("location: patientLogin.php");
 }
 }else {
-    header ("location: doctorSignUp2.php?error=Wrong password");
+    header ("location: patientSignUp2.php?error=Wrong password");
     exit();
 }
 }
 }
 ?>
-
-
-
 
 
 

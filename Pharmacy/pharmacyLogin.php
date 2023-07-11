@@ -55,11 +55,14 @@ if(empty($uname)){
 <!DOCTYPE html>
 <html>
     <head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
         <title>Login Page</title>
     </head>
     <body>
+    <div class="l">
+    <img src="../css/avatar.jpg" class="avatar">
         <form method="post" action="">
-            <h2>LOGIN</h2>
+            <h1>PHARMACY LOGIN</h1>
 
             <?php
             if (isset($_GET['error'])){?>
@@ -73,7 +76,8 @@ if(empty($uname)){
             <label for="pWord">Password:</label><br>
             <input type="password" id="password" name="pword" ><br><br>
 
-            <button name="login" type="submit" value="login">Login</button>
+            <input type="submit" name="submit" value="Login"> 
         </form>
+            </div>
     </body>
 </html>

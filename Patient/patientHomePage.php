@@ -4,10 +4,10 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-<section>
+        <section>
             <div class="container">
                 <nav>
                     <div class="logo">
@@ -15,9 +15,9 @@ session_start();
                     </div>
                     <ul>
                         <li><a href="#" class=active>Home</a></li>
-                        <li><a href="pendingPrescriptions.php">Awaiting Prescriptions</a></li>
-                        <li><a href="administeredPrescriptions.php">Administered Prescriptions</a></li>
-                        <li><a href="doctorEdit.php">Account</a></li>
+                        <li><a href="symptoms.php">Symptoms</a></li>
+                        <li><a href="prescribedDrugs.php">Prescribed Drugs</a></li>
+                        <li><a href="edit.php">Account</a></li>
                         <li><a href=""><img src="../css/avatar.jpg"></a>
                         <div class="submenu">
                     <ul>
@@ -31,7 +31,5 @@ session_start();
                 </nav>
             </div>
         </section>
-
-</body>
-
+    </body>
 </html>

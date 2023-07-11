@@ -8,7 +8,7 @@ session_start();
 <p style="text-align:right;"> <?php echo $_SESSION['orgName'];?></p> 
 <h2 style="text-align:center;">Pharmacy </h2> 
     
-
+<a href="\DrugDispensingProject\Pharmacy\contract.php">Contract</a><br>
     <a href="\DrugDispensingProject\logout.php">Logout</a>
 
 </body>
