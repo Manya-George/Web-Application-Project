@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Afya Njema Dispensary</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+	    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="webpageLogo.jpg" height="80px" width="80px">
+                    </div>
+                        <nav>
+                        <ul>
+                            <div class="dropdown">
+                            <li><a class="active1">Log in</a>
+                                <div class="submenu1">
+                                    <ul>
+                                    <li><a href="adminLogin.php">Admin</a></li>
+                                    <li><a href="loginpage.php">Patient</a></li>
+                                    <li><a href="doctorLogin.php">Doctor</a></li>
+                                    <li><a href="driverLogin.php">Delivery Driver</a></li>
+                                    <li><a href="pharmaceuticalCLogin.php">Pharma Co.</a></li>
+                                    <li><a href="pharmacyLogin.php"> Pharmacy</a></li>
+                                    </ul>
+                                </div>
+                            </li> 
+                            </div>                           
+                            <li><a class="active" href="userRegistration.html">Get Started</a></li>  
+                        </nav>
+                        </ul>                    
+                </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Your One Stop Dispensary<br> For All Your Medical Needs</h1>
+		            <p>Health Care is an essential need and through Afya Njema<br>we aim to provide it to your personal liking.</p>
+                    <p>Have a personalized page</p>
+                    <a href="userRegistration.html" title="Register" target="_blank" class="btn">Join Us</a>           
+                </div>
+                <div class="col-2">
+                    <img src="landinPageImg1.png">
+                </div>
+            </div>
+            </div>
+        </section>
+
+<!---- BENEFITS ------->
+
+        <section>
+            <div class="services">
+                <div class="small-container">           
+                    <div class="row">
+                    <div class="col-3">
+                        <img class="mySlides" src="describeSymptoms.png" width="450px" height="300px">
+                        <img class="mySlides" src="deliverMedication.png" width="450px" height="300px">
+                        <img class="mySlides" src="sellMedication.png" width="450px" height="300px">
+                        <button class="btn" onclick="plusDivs(-1)">&#10094;</button>
+                        <button class="btn" onclick="plusDivs(+1)">&#10095;</button>
+                        <script>
+                            var slideIndex = 1;
+                            showDivs(slideIndex);
+                            
+                            function plusDivs(n) {
+                              showDivs(slideIndex += n);
+                            }
+                            
+                            function showDivs(n) {
+                              var i;
+                              var x = document.getElementsByClassName("mySlides");
+                              if (n > x.length) {slideIndex = 1}
+                              if (n < 1) {slideIndex = x.length}
+                              for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                              }
+                              x[slideIndex-1].style.display = "block";  
+                            }
+                            </script>
+                    </div> 
+                    <div class="col-3">
+                        <h1>Your Needs<br>We Provide</h1>
+                        <div class="dropdown">
+                            <span><h2><a href="userRegistration.html">1. Contact a Physician</a></h2></span>
+                            <div class="dropdown-content1">
+                            <p>Registered patients are able to contact physicians to describe symptoms, receive prescriptions and order medication<br><span>Click to register</span></p>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <span><h2><a href="userRegistration.html">2. Deliver Medication</a></h2></span>
+                            <div class="dropdown-content2">
+                            <p>With Afya Njema, you can register as a delivery driver today and deliver order medication<br><span>Click to register</span></p>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <span><h2><a href="userRegistration.html">3. Sell Medication to Patients</a></h2></span>
+                            <div class="dropdown-content3">
+                            <p>Pharmacies can register with Afya Njema and sell medication to all our registered patients<br><span>Click to register</span></p>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <span><h2><a href="userRegistration.html">4. Treat Patients</a></h2></span>
+                            <div class="dropdown-content4">
+                            <p>With Afya Njema, registered physicians can treat patients by prescribing available medication and more<br><span>Click to register</span></p>
+                            </div>
+                        </div>
+                    </div>              
+            </div>
+        </section>
+
+<!---- TRUST LIST ------->
+
+        <section>
+            <div>
+                <h1 class="title">In Partnership With</h1>
+            </div>
+            <div class="flex-container">
+                <div><img src="mydawa.png" height="200px" width="300px"></div>
+                <div><img src="cosmosltd.png" height="200px" width="300px"></div>
+                <div><img src="goodlife.png" height="200px" width="300px"></div>
+                <div><img src="malibupharm.png" height="200px" width="300px"></div>
+            </div>
+        </section>
+
+<!---- FOOTER ------->       
+
+        <section>
+            <div class="small-container1">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>Afya Njema Dispensary</h5>
+                        <ul>
+                            <li>About Us</li>
+                            <li>Services</li>
+                            <li>Our Blog</li>
+                            <li>Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
