@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once "connect.php";
-if(isset($_POST['login'])){
+include_once "../Common/connect.php";
+if(isset($_POST['submit'])){
 if(isset($_POST["uname"])&&isset($_POST["pword"])){
 
 function validate($data){
@@ -29,9 +29,14 @@ if(empty($uname)){
        $row=mysqli_fetch_assoc($result);
        if($row['username']===$uname && $row['passwords']=== $pword)
        {
+        $_SESSION['pharmacistID']=$row['pharmacistID'];
         $_SESSION['username']=$row['username'];
         $_SESSION['password']=$row['password'];
         $_SESSION['orgName']=$row['orgName'];
+        $_SESSION['pharmacistName']=$row['pharmacistName'];
+        $_SESSION['phoneNumber']=$row['phoneNumber'];
+        $_SESSION['addresses']=$row['addresses'];
+        $_SESSION['email']=$row['email'];
         header("Location: pharmacyHomePage.php");
         
        }else{
@@ -55,11 +60,14 @@ if(empty($uname)){
 <!DOCTYPE html>
 <html>
     <head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
         <title>Login Page</title>
     </head>
     <body>
+    <div class="l">
+    <img src="../css/avatar.jpg" class="avatar">
         <form method="post" action="">
-            <h2>LOGIN</h2>
+            <h1>PHARMACY LOGIN</h1>
 
             <?php
             if (isset($_GET['error'])){?>
@@ -73,7 +81,8 @@ if(empty($uname)){
             <label for="pWord">Password:</label><br>
             <input type="password" id="password" name="pword" ><br><br>
 
-            <button name="login" type="submit" value="login">Login</button>
+            <input type="submit" name="submit" value="Login"> 
         </form>
+            </div>
     </body>
 </html>

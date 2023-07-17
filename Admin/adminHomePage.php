@@ -3,10 +3,10 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+<head>   
+         <link rel="stylesheet" type="text/css" href="..\css\style.css">
 </head>
-<body class="pharmacy">
+<body class=admin>
 <section>
             <div class="container">
                 <nav>
@@ -15,15 +15,14 @@ session_start();
                     </div>
                     <ul>
                         <li><a href="#" class=active>Home</a></li>
-                        <li><a href="drugs.php">Drugs</a></li>
-                        <li><a href="addDrug.php">Add Drug</a></li>
-                        <li><a href="viewPrescriptions.php">Prescriptions</a></li>
-                        <li><a href="dispensedDrugs.php">Dispensed Drugs</a></li>
+                        <li><a href="patients.php">Patients</a></li>
+                        <li><a href="doctors.php">Doctors</a></li>
+                        <li><a href="pharmacists.php">Pharmacists</a></li>
                         <li><a href="edit.php">Account</a></li>
                         <li><a href=""><img src="../css/avatar.jpg"></a>
                         <div class="submenu">
                     <ul>
-                        <li><h1><?php echo $_SESSION['pharmacistName'];?></h1></li>
+                        <li><h1><?php echo $_SESSION['username'];?></h1></li>
                         <li><a href="delete.php">Disable Account</a></li>
                     <li><a href="../Common/landingPage.php">Logout</a></li>
                     </ul>
@@ -34,10 +33,30 @@ session_start();
             </div>
         </section>
         <div class="words">
-<h1>Delivering Medicine to Customers</h1>
-<a href="addDrug.php">Add drug</a>
-<a href="viewPrescriptions.php">Dispense</a>
+<h1>Overlook the Users</h1>
+<a href="patients.php">Patients</a>
+<a href="doctors.php">Doctors</a>
+<a href="pharmacists.php">Pharmacists</a>
 </div>
-</body>
 
+</body>
 </html>
+
+
+
+
+    
+  
+  
+   
+  
+
+    
+  
+    
+  
+    
+  
+    
+      
+   

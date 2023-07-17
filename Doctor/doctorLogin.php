@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once "connect.php";
-if(isset($_POST['login'])){
+include_once "../Common/connect.php";
+if(isset($_POST['submit'])){
 if(isset($_POST["uname"])&&isset($_POST["pword"])){
 
 function validate($data){
@@ -30,7 +30,14 @@ if(empty($uname)){
        if($row['username']===$uname && $row['passwords']=== $pword)
        {
         $_SESSION['username']=$row['username'];
-        $_SESSION['password']=$row['password'];
+        $_SESSION['password']=$row['passwords'];
+        $_SESSION['SSN']=$row['SSN'];
+        $_SESSION['fullName']=$row['fullName'];
+        $_SESSION['speciality']=$row['speciality'];
+        $_SESSION['yearsOfExperience']=$row['yearsOfExperience'];
+        $_SESSION['phoneNumber']=$row['phoneNumber'];
+        $_SESSION['email']=$row['eMail'];
+        $_SESSION['ranks']=$row['ranks'];
         header("Location: doctorHomePage.php");
         
        }else{
@@ -54,11 +61,14 @@ if(empty($uname)){
 <!DOCTYPE html>
 <html>
     <head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
         <title>Login Page</title>
     </head>
     <body>
+    <div class="l">
+    <img src="../css/avatar.jpg" class="avatar">
         <form method="post" action="">
-            <h2>LOGIN</h2>
+            <h1>DOCTOR LOGIN</h1>
 
             <?php
             if (isset($_GET['error'])){?>
@@ -72,7 +82,8 @@ if(empty($uname)){
             <label for="pWord">Password:</label><br>
             <input type="password" id="password" name="pword" ><br><br>
 
-            <button name="login" type="submit" value="login">Login</button>
+            <input type="submit" name="submit" value="Login"> 
         </form>
+            </div>
     </body>
 </html>
