@@ -2,17 +2,13 @@
 <html>
     <head>
         <title>Users Registration</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
         <link rel="stylesheet" href="registrationPage.css">
         <style>
-            button{
-                    display: inline-block;
-	                background: black;
-	                color: white;
-	                padding: 8px 30px;
-	                margin: 30px 0;
-	                border-radius: 30px;
+            .col-1 img{
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            }
+            .col-1:hover{
+	            transform: translateY(-7px);
             }
         </style>
     </head>
@@ -26,43 +22,34 @@
                     <h1>Register To Join Us</h1>
                 </nav>
             </div>        
-        </div>
-        </div>
-    </section>
 
-    <section> 
-    <ul>
-        <li>
-        <a href="adminSignUp.php">
-            <button class="btn">Admin &#8594;</button>
-        </a>
-        </li>
-        <li>
-        <a href="patientform.html">
-            <button class="btn">Patient &#8594;</button>
-        </a>
-        </li>
-        <li>
-        <a href="doctorSignUp1.php">
-            <button class="btn">Doctor &#8594;</button>
-        </a>
-        </li>
-        <li>
-        <a href="driverSignUp1.php">
-            <button class="btn">Delivery Driver &#8594;</button>
-        </a>
-        </li>
-        <li>
-        <a href="pharmacySignUp1.php">
-            <button class="btn">Pharmacy &#8594;</button>
-        </a>
-        </li>
-        <li>
-        <a href="pharmaceuticalCSignUp1.php">
-            <button class="btn">Pharmaceutical Company &#8594;</button><br>
-        </a>
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-1">
+            <img src="admin.png" onclick="window.location.href='adminSignUp.php'" width="200px" height="200px">
+            <h4>Register as an Admin<br>Below</h4>
+            <button onclick="window.location.href='adminSignUp.php'" class="btn">Admin &#8594;</button>
+        </div>
+        <div class="col-1">
+            <img src="patient.png" onclick="window.location.href='patientSignUp1.php'" width="200px" height="200px">
+            <h4>Register as a Patient<br>Below</h4>
+            <button onclick="window.location.href='patientSignUp1.php'" class="btn">Patient &#8594;</button>
+        </div>
+        <div class="col-1">
+            <img src="doctor.png" onclick="window.location.href='doctorSignUp1.php'" width="200px" height="200px">
+            <h4>Register as a Doctor<br>Below</h4>
+            <button onclick="window.location.href='doctorSignUp1.php'" class="btn">Doctor &#8594;</button>
+        </div>
+        <div class="col-1">
+            <img src="pharmacy.png" onclick="window.location.href='pharmacySignUp1.php'" width="200px" height="200px">
+            <h4>Register your Pharmacy<br>Below</h4>
+            <button onclick="window.location.href='pharmacySignUp1.php'" class="btn">Pharmacy &#8594;</button>
+        </div>
+        <div class="col-1">
+            <img src="pharmaceuticalcompany.png" onclick="window.location.href='pharmaceuticalCSignUp1.php'" width="200px" height="200px">
+            <h4>Register your Pharmaceutical Company<br>Below</h4>
+            <button onclick="window.location.href='pharmaceuticalCSignUp1.php'" class="btn">Pharmaceutical Company &#8594;</button>
+        </div>
+    </div>
 </section>    
-    </body>
+</body>
 </html>
